@@ -1,0 +1,185 @@
+/***
+**** BASIC
+*****/
+
+h1 {
+  font-size: 18px; 
+}
+
+
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+
+#wrapper {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+
+/***
+**** OVERLAY & CONTENTS
+*****/
+
+#overlay {
+  display: none; 
+  position: fixed; 
+  z-index: 100; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;  
+  background-color: rgba(0,0,0,0.4); 
+  flex-direction: column;
+  align-items: center;
+}
+
+#imgInfo,
+#overlayImg {
+  width: 100%;
+}
+
+.mainItems {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+#imgInfo {
+  height: 90px;
+  background: rgba(0,0,0,.8);
+  padding: 5px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+}
+
+
+#spotifyIcon {
+  width: 30px;
+  height: 30px;
+}
+
+
+/***
+**** SEARCH INPUT
+*****/
+
+#artistSearch {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label, input {
+  color: #737373;
+}
+
+label {
+  margin-right: auto;
+  margin-left: 20px;
+  
+}
+
+input[type="search"] {
+  border: 2px solid #737373;
+  border-width: 0 0 3px;
+  background-color: transparent;
+  font: 22px "Open Sans", sans-serif;
+  padding: 0.125em 0.225em;
+  width: 40%;
+  margin-left: auto;
+}
+
+input[type="search"]:focus {
+  color: lightgreen;
+  border-color: lightgreen;
+  outline: none;
+}
+
+
+
+/***
+**** GALLERY SECTION
+*****/
+
+#gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+
+#gallery div {
+  margin-bottom: 30px;
+}
+
+#gallery img {
+  width: 100%; 
+}
+
+/********* Img Hover Styles *************/
+
+#gallery div img {
+	-webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+#gallery div:hover img {
+	-webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
+}
+
+
+
+
+
+/***
+**** MEDIA QUERIES
+*****/
+
+
+@media (min-width:480px) {
+
+  #gallery div {
+    width: 47%;
+  }
+
+
+}
+
+
+@media (min-width:780px) {
+  
+  .mainItems {
+    width:  600px;
+    height: 600px;
+  }
+
+  #overlay {
+    align-items: center;
+  }
+
+  #gallery div {
+    width: 30%;
+  }
+
+}
+
+@media (min-width:1200px) {
+    
+  #gallery div {
+    width: 23%;
+  }
+
+}
